@@ -1,0 +1,7 @@
+dockerbuild:
+
+  build_args:
+    jupyterhub_version:
+      key: hub
+      versions:
+       - 2.3.1

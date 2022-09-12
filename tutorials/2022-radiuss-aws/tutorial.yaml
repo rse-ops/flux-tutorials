@@ -1,0 +1,5 @@
+title: "Flux Tutorial: 2022 for RADIUSS"
+container: ghcr.io/radiuss/flux-tutorials:2022-radiuss-aws
+notebooks:
+  - name: 01-radiuss-aws-flux.ipynb
+    title: Flux Jobs Tutorial
