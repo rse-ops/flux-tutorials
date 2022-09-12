@@ -5,17 +5,17 @@ ARG jupyterhub_version=2.3.1
 RUN sudo apt-get update
 RUN DEBIAN_FRONTEND="noninteractive" sudo apt-get -y install \
     python3-pip \
-    npm \
-    && sudo apt-get clean \
-    && sudo apt-get autoremove \
-    && sudo rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    npm
 
-RUN pip3 install --upgrade pip \
-    && pip3 install setuptools-rust zipp==3.7.0 \
+RUN pip3 install setuptools-rust zipp==3.7.0 \
     && pip3 install jupyterhub==$jupyterhub_version} \
     && sudo npm install -g configurable-http-proxy \
     && python3 -m pip install jupyterlab notebook \
     && echo "export PATH=$HOME/.local/bin:$PATH" >> "$HOME/.bashrc"
+
+RUN sudo apt-get clean \
+    && sudo apt-get autoremove \
+    && sudo rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN git clone https://github.com/flux-framework/flux-workflow-examples.git
 

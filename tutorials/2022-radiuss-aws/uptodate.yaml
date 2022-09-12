@@ -4,4 +4,4 @@ dockerbuild:
     jupyterhub_version:
       key: hub
       versions:
-       - 3.0.0
+       - 2.3.1
