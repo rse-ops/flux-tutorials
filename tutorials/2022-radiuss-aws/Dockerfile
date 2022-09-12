@@ -19,12 +19,12 @@ RUN pip3 install --upgrade pip \
 
 RUN git clone https://github.com/flux-framework/flux-workflow-examples.git
 
-COPY --chown=fluxuser:fluxuser radiuss-aws-flux.ipynb .
-COPY --chown=fluxuser:fluxuser sleep_batch.sh .
-COPY --chown=fluxuser:fluxuser sleeps.sh .
-COPY --chown=fluxuser:fluxuser sub_job1.sh .
-COPY --chown=fluxuser:fluxuser sub_job2.sh .
-COPY --chown=fluxuser:fluxuser Flux-logo.svg .
+COPY --chown=fluxuser:fluxuser notebooks/01-radiuss-aws-flux.ipynb .
+COPY --chown=fluxuser:fluxuser notebooks/sleep_batch.sh .
+COPY --chown=fluxuser:fluxuser notebooks/sleeps.sh .
+COPY --chown=fluxuser:fluxuser notebooks/sub_job1.sh .
+COPY --chown=fluxuser:fluxuser notebooks/sub_job2.sh .
+COPY --chown=fluxuser:fluxuser notebooks/Flux-logo.svg .
 
 ENV SHELL=/usr/bin/bash
 ENV FLUX_URI_RESOLVE_LOCAL=t
