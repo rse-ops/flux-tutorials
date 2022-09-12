@@ -7,8 +7,9 @@ RUN DEBIAN_FRONTEND="noninteractive" sudo apt-get -y install \
     python3-pip \
     npm
 
-RUN pip3 install setuptools-rust zipp==3.7.0 \
-    && pip3 install jupyterhub==$jupyterhub_version} \
+RUN pip3 install --upgrade pip \
+    && pip3 install setuptools-rust zipp==3.7.0 \
+    && pip3 install jupyterhub \
     && sudo npm install -g configurable-http-proxy \
     && python3 -m pip install jupyterlab notebook \
     && echo "export PATH=$HOME/.local/bin:$PATH" >> "$HOME/.bashrc"
