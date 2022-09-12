@@ -79,7 +79,7 @@ jobs:
     - name: Pull Docker Layers
       env:
         container: ${{ matrix.result.container_name }}
-      run: docker pull ghcr.io/flux-framework/${container} || exit 0
+      run: docker pull ghcr.io/rse-ops/${container} || exit 0
 
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v1
@@ -115,4 +115,4 @@ jobs:
         push: ${{ github.event_name != 'pull_request' }}
         build-args: |
           ${{ env.build_args }}
-        tags: ghcr.io/flux-framework/${{ env.container }}
+        tags: ghcr.io/rse-ops/${{ env.container }}
