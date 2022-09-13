@@ -1,9 +1,6 @@
 name: Container Build Matrices
 
-# TODO simplify into an action? Or is that too much?
-
 on: 
-  # Enable for testing builds for a PR
   pull_request: []
   push:
     branches:
@@ -15,32 +12,13 @@ jobs:
     name: Generate Build Matrix
     runs-on: ubuntu-latest
     outputs:
-      dockerbuild_matrix: ${{ steps.dockerbuild.outputs.dockerbuild_matrix }}
-      empty_matrix: ${{ steps.dockerbuild.outputs.dockerbuild_matrix_empty }}
-
+      matrix: ${{ steps.matrix.outputs.matrix }}
+      is_empty: ${{ steps.matrix.outputs.is_empty }}
     steps:
-    - uses: actions/checkout@v3
+    - uses: rse-ops/ci/uptodate/matrix@add/uptodate-action
+      id: matrix
       with:
-         fetch-depth: 0
-
-    - name: Generate Build Matrix
-      uses: vsoch/uptodate@main
-      id: dockerbuild
-      with: 
         root: tutorials
-        parser: dockerbuild
-        flags: "--all"
-
-    - name: View and Check Build Matrix Result
-      env:
-        result: ${{ steps.dockerbuild.outputs.dockerbuild_matrix }}
-      run: |
-        echo ${result}
-        if [[ "${result}" == "[]" ]]; then
-          printf "The matrix is empty, will not trigger next workflow.\n"
-        else
-          printf "The matrix is not empty, and we should continue on to the next workflow.\n"
-        fi
 
   build:
     needs:
@@ -49,70 +27,16 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        result: ${{ fromJson(needs.generate.outputs.dockerbuild_matrix) }}
-        arch: ['linux/amd64']
+        result: ${{ fromJson(needs.generate.outputs.matrix) }}
 
-    if: ${{ needs.generate.outputs.empty_matrix == 'false' }}
-
-    name: "Build ${{ matrix.result.container_name }} ${{ matrix.arch[0] }}" 
+    if: ${{ needs.generate.outputs.is_empty == 'false' }}
+    name: "Build ${{ matrix.result.container_name }}" 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
-    - uses: actions/setup-go@v2
-    - uses: imjasonh/setup-crane@01d26682810dcd47bfc8eb1efe791558123a9373
-
-    - name: GHCR Login
-      if: (github.event_name != 'pull_request')
-      uses: docker/login-action@v1 
+    - uses: rse-ops/ci/uptodate/build@add/uptodate-action
       with:
+        repo: rse-ops
         registry: ghcr.io
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v1
-    
-   # Uncomment if need more build space   
-   # - name: Run Actions Cleaner
-   #   uses: rse-ops/actions-cleaner/ubuntu@main
-
-    - name: Pull Docker Layers
-      env:
-        container: ${{ matrix.result.container_name }}
-      run: docker pull ghcr.io/rse-ops/${container} || exit 0
-
-    - name: Set up QEMU
-      uses: docker/setup-qemu-action@v1
-
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v1
-
-    - name: Prepare ${{ matrix.result.container_name }}
-      id: builder
-      env:
-        container: ${{ matrix.result.container_name }}
-        prefix: ${{ matrix.result.command_prefix }}
-        filename: ${{ matrix.result.filename }}
-      run: |
-        basedir=$(dirname $filename)
-        printf "Base directory is ${basedir}\n"
-        # Get relative path to PWD and generate dashed name from it
-        cd $basedir
-        echo "${prefix} -t ${container} ."
-        build_args="$(echo "${prefix#*--build-arg}")"
-        # Add build-arg for anaconda download
-        echo "dockerfile_dir=${basedir}" >> $GITHUB_ENV
-        echo "build_args=${build_args}" >> $GITHUB_ENV
-        echo "container=${container}" >> $GITHUB_ENV
-        echo "filename=${filename}" >> $GITHUB_ENV
-
-    - name: Build ${{ matrix.dockerfile[1] }}
-      uses: docker/build-push-action@v2
-      with:
-        context: ${{ env.dockerfile_dir }}
-        file: ${{ env.filename }}
-        platforms: ${{ matrix.arch[0] }}
-        push: ${{ github.event_name != 'pull_request' }}
-        build-args: |
-          ${{ env.build_args }}
-        tags: ghcr.io/rse-ops/${{ env.container }}
+        result: ${{ matrix.result }}
+        deploy: ${{ github.event_name != 'pull_request' }}
+        token: ${{ secrets.GITHUB_TOKEN }}
+        dockerfile: Dockerfile
