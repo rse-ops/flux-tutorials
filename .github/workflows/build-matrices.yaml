@@ -15,7 +15,7 @@ jobs:
       matrix: ${{ steps.matrix.outputs.matrix }}
       is_empty: ${{ steps.matrix.outputs.is_empty }}
     steps:
-    - uses: rse-ops/ci/uptodate/matrix@add/uptodate-action
+    - uses: rse-ops/ci/uptodate/matrix@main
       id: matrix
       with:
         root: tutorials
@@ -32,7 +32,7 @@ jobs:
     if: ${{ needs.generate.outputs.is_empty == 'false' }}
     name: "Build ${{ matrix.result.container_name }}" 
     steps:
-    - uses: rse-ops/ci/uptodate/build@add/uptodate-action
+    - uses: rse-ops/ci/uptodate/build@main
       with:
         repo: rse-ops
         registry: ghcr.io
