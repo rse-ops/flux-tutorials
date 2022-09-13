@@ -36,7 +36,7 @@ jobs:
       with:
         repo: rse-ops
         registry: ghcr.io
-        deploy: "${{ github.event_name == 'pull_request')"
+        deploy: "${{ github.event_name == 'pull_request' }}"
         token: ${{ secrets.GITHUB_TOKEN }}
         container_name: flux-${{ matrix.result.container_name }}
         command_prefix: ${{ matrix.result.command_prefix }}
