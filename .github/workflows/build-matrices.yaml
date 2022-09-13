@@ -1,0 +1,43 @@
+name: Container Build Matrices
+
+on: 
+  pull_request: []
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  generate:
+    name: Generate Build Matrix
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+      is_empty: ${{ steps.matrix.outputs.is_empty }}
+    steps:
+    - uses: rse-ops/ci/uptodate/matrix@main
+      id: matrix
+      with:
+        root: tutorials
+
+  build:
+    needs:
+      - generate
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        result: ${{ fromJson(needs.generate.outputs.matrix) }}
+
+    if: ${{ needs.generate.outputs.is_empty == 'false' }}
+    name: "Build ${{ matrix.result.container_name }}" 
+    steps:
+    - uses: rse-ops/ci/uptodate/build@main
+      with:
+        repo: rse-ops
+        registry: ghcr.io
+        deploy: (github.event_name != 'pull_request')
+        token: ${{ secrets.GITHUB_TOKEN }}
+        container_name: ${{ matrix.result.container_name }}
+        command_prefix: ${{ matrix.result.command_prefix }}
+        dockerfile: ${{ matrix.result.filename }}
