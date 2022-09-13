@@ -38,7 +38,6 @@ jobs:
         registry: ghcr.io
         deploy: (github.event_name != 'pull_request')
         token: ${{ secrets.GITHUB_TOKEN }}
-        dockerfile: Dockerfile
         container_name: ${{ matrix.result.container_name }}
         command_prefix: ${{ matrix.result.command_prefix }}
-        filename: ${{ matrix.result.filename }}
+        dockerfile: ${{ matrix.result.filename }}
