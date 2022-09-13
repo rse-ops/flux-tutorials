@@ -36,7 +36,7 @@ jobs:
       with:
         repo: rse-ops
         registry: ghcr.io
-        deploy: ${{ github.event_name != 'pull_request' }}
+        deploy: (github.event_name != 'pull_request')
         token: ${{ secrets.GITHUB_TOKEN }}
         dockerfile: Dockerfile
         container_name: ${{ matrix.result.container_name }}
