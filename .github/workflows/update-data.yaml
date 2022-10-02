@@ -22,7 +22,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with: 
-        results_dir: _data/
+        results_dir: docs/_data/
         extract: repos repo_metadata topics languages releases stars activity_commits activity_lines
         extract_save_format: year/month
 
