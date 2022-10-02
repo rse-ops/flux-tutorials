@@ -1,0 +1,33 @@
+name: Update Contributor CI Data
+on:
+  workflow_dispatch
+  pull_request: []
+  schedule:
+    - cron:  '0 3 * * *'
+
+jobs:
+  extraction:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+    - name: Update Data
+
+      uses: vsoch/contributor-ci@0.0.15
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with: 
+        results_dir: _data/
+        extract: repos repo_metadata topics languages releases stars activity_commits activity_lines
+        extract_save_format: year/month
+
+    - name: Check that results exist
+      run: tree _data
+
+    - name: Push Results
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@users.noreply.github.com"
+        git add _data/data/*
+        git commit -m "Automated push with new data results $(date '+%Y-%m-%d')" || exit 0
+        git push origin main || exit 0

@@ -1,0 +1,13 @@
+# The output directory to create a structure of results
+# defaults to $PWD/.cci if not set
+outdir: _data/cci
+
+# These two are only required to group people into member groups,
+# which we don't really need or want to do.
+orgs: []
+member_orgs: []
+
+# Custom set of repos in radiuss
+repos:
+- flux-framework/flux-core
+- flux-framework/flux-sched
