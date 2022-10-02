@@ -1,7 +1,7 @@
 name: Update Contributor CI Data
 on:
-  workflow_dispatch
-  pull_request: []
+  workflow_dispatch:
+  pull_request:
   schedule:
     - cron:  '0 3 * * *'
 
