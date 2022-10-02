@@ -1,0 +1,5 @@
+member_orgs: []
+orgs: []
+outdir: _data/cci
+repos:
+- flux-framework/flux-core
