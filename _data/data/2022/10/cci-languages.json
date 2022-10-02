@@ -1,0 +1,89 @@
+{
+    "flux-framework/flux-core": {
+        "languages": {
+            "totalCount": 11,
+            "totalSize": 10185067,
+            "nodes": [
+                {
+                    "name": "C",
+                    "color": "#555555"
+                },
+                {
+                    "name": "Shell",
+                    "color": "#89e051"
+                },
+                {
+                    "name": "Python",
+                    "color": "#3572A5"
+                },
+                {
+                    "name": "M4",
+                    "color": null
+                },
+                {
+                    "name": "Makefile",
+                    "color": "#427819"
+                },
+                {
+                    "name": "Lua",
+                    "color": "#000080"
+                },
+                {
+                    "name": "Roff",
+                    "color": "#ecdebe"
+                },
+                {
+                    "name": "Dockerfile",
+                    "color": "#384d54"
+                },
+                {
+                    "name": "Terra",
+                    "color": "#00004c"
+                },
+                {
+                    "name": "SourcePawn",
+                    "color": "#f69e1d"
+                },
+                {
+                    "name": "Perl",
+                    "color": "#0298c3"
+                }
+            ],
+            "edges": [
+                {
+                    "size": 7610880
+                },
+                {
+                    "size": 1247014
+                },
+                {
+                    "size": 835674
+                },
+                {
+                    "size": 162632
+                },
+                {
+                    "size": 137328
+                },
+                {
+                    "size": 100700
+                },
+                {
+                    "size": 26527
+                },
+                {
+                    "size": 23954
+                },
+                {
+                    "size": 20375
+                },
+                {
+                    "size": 10804
+                },
+                {
+                    "size": 9179
+                }
+            ]
+        }
+    }
+}
