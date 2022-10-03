@@ -1,0 +1,19 @@
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js'></script>
+<script>
+var grid = $('.grid').isotope();
+
+{% assign types =  site.events | map: 'event_type' | join: ','  | split: ',' | uniq %}
+{% for type in types %}$(".filter-{{ type | replace: 'Event', '' }}").on('click', function(event) {
+  event.preventDefault();
+  grid.isotope({ filter: ".card-{{ type | replace: 'Event', '' }}" });
+});{% endfor %}
+
+$('.filter-reset').on('click', function(event) {
+  event.preventDefault();
+  grid.isotope({ filter: '*' });
+});
+</script>
+<footer class="site-footer">
+  <span class="site-footer-credits">If you like this activity portal, you can find it on <a target="_blank" href="https://github.com/rseng/opensource-heartbeat-action">GitHub ❤️</a>.</span>
+</footer>

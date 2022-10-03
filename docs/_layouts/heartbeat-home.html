@@ -1,0 +1,19 @@
+---
+layout: heartbeat-default
+---
+<nav>
+{% assign types =  site.events | map: 'event_type' | join: ','  | split: ',' | uniq %}
+  <ul>
+    <li style="padding-top:8px">Filters:</li>{% for type in types %}
+    <li><a style="color:rgb(26,25,25)" class="button {{ type | replace: 'Event', '' }} filter-{{ type | replace: 'Event', '' }}" href="#">{{ type | replace: 'Event', '' }}</a></li>{% endfor %}
+    <li><a style="color:rgb(26,25,25)" class="button reset filter-reset" href="#">reset</a></li>
+  </ul>
+  {% include browse.html %}
+</nav>
+{% assign events = site.events | sort: 'date' | reverse %}
+<main class="grid flex-grid">{% for event in events limit:100 %}
+     <div onclick="window.open('{{ event.html_url }}', '_blank');" class="card card-{{ event.event_type | replace: 'Event', '' }} {{ event.event_type | replace: 'Event', '' }}">
+          <a style="position:absolute" href="https://github.com/{{ event.user }}" target="_blank"><img src="{{ event.avatar }}" width="100px"></a>
+          <span style="padding-left:130px">{{ event.content | markdownify }}</span>
+     </div>{% endfor %}
+</main>

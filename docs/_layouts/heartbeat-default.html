@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.6/css/all.css'>
+
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i'>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/heartbeat.css">
+
+<br><br>
+<header>
+  <h1 style="color:rgb(26,25,25)">{% if page.title %}{{ page.title }}{% else %}Open Source Heartbeat{% endif %}{% if site.subtitle %}{{ site.subtitle }}{% endif %}</h1>
+   {% include heart.html %}
+</header>
+
+<div style="position: absolute; top:10px; left: 10px"><a  style="color:rgb(26,25,25)" class="button" href="{{ site.baseurl }}/projects"><i style="font-size:12px;margin-right:3px;" class="fa fa-arrow-left"></i> Projects</a>
+<a class="button" style="color:rgb(26,25,25)" href="{{ site.baseurl }}/"><i style="font-size:12px;margin-right:3px;"  class="fa fa-arrow-left"></i> RADIUSS Home</a>
+</div>
+
+{{ content }}
+<div class="container">
+  {% include page-footer.html %}
+</div>

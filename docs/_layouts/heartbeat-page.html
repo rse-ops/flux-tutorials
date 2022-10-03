@@ -1,0 +1,14 @@
+---
+layout: heartbeat-default
+---
+<nav>
+{% include browse.html %}
+<small><a style="color:rgb(26,25,25)" class="smalltext" href="{{ site.baseurl }}/activity/archive/{{ page.event_type | downcase }}/">View {{ page.event_type }} Archive</a></small>
+</nav>
+{% assign events = site.events | where: "event_type", page.event_type | sort: 'date' | reverse %}
+<main class="grid flex-grid" style="max-width:100%">{% for event in events limit:500 %}
+     <div onclick="window.open('{{ event.html_url }}', '_blank');" style="width:calc(18%);" class="card card-{{ event.event_type | replace: 'Event', '' }} {{ event.event_type | replace: 'Event', '' }}">
+          <a style="position:absolute" href="https://github.com/{{ event.user }}" target="_blank"><img src="{{ event.avatar }}" width="100px"></a>
+          <span style="padding-left:130px">{{ event.content | markdownify }}</span>
+     </div>{% endfor %}
+</main>

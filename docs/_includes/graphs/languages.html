@@ -1,0 +1,9 @@
+<svg class="radiuss-graph" height="100%" width="100%" id="languages"></svg>
+<script src="{{ site.baseurl }}/assets/js/extractors/languages.js"></script>
+
+<script>
+$(document).ready(function(){
+  console.log("{{ include.width }}")
+  draw_pie_languages('#languages'{% if include.width %}, {{ include.width }}{% endif %}{% if include.height %}, {{ include.height }}{% endif %});
+})
+</script>

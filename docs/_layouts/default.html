@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  {% include meta.html %}
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Roboto:400,500|Roboto+Mono:400">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.6/css/all.css'>
+  <link rel='stylesheet' href='https://unpkg.com/@yaireo/tagify/dist/tagify.css'>
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/site.css">
+  {% include favicons.html %}
+
+</head>
+
+<style>
+.item {
+  color: white;
+  font-size: 13px;
+}
+
+.customSuggestionsList > div{
+  max-height: 300px;
+  border: 2px solid pink;
+  overflow: auto;
+}
+.tagify {
+  text-align: left;
+  background-color: white;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.pen-intro{
+}
+
+input{
+  order: 5;
+}
+
+.tagify__input {
+    color: black !important;
+}
+
+label[for='checkbox-tagify-show-input']{
+  position: absolute;
+  top: .85em;
+  left: 2.5em;
+}
+
+label[for='checkbox-tagify-show-input'] + input{
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  transform: scale(1.4);
+}
+
+label[for='checkbox-tagify-show-input'] + input:checked ~ input,
+label[for='checkbox-tagify-show-input'] + input:checked ~ textarea{
+  display: block !important;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 1.5em;
+}
+
+label[for='checkbox-tagify-show-input'] + input:checked ~ textaragifyea{
+    min-height: 11ch;
+}
+</style>
+
+<body>
+{{ content }}
+
+{% unless page.no_footer %}{% include footer.html %}{% endunless %}
+</body>
+</html>

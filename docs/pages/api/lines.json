@@ -1,0 +1,7 @@
+---
+layout: null
+permalink: /api/lines.json
+---
+
+
+{{ site.data.data.latest.cci-activity_lines | jsonify }}

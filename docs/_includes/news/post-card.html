@@ -1,0 +1,22 @@
+<article>
+	<a href="{{ post.url | prepend: site.baseurl }}"> 
+	<h3 >{{ post.title }}</h3></a> 
+	{% if post.tags.size > 0 %} 
+	<div class="tags" style="display:block">
+		{% for tag in post.tags %} {% include tag.html tag=tag %} {% endfor %} 
+	</div><br><br>
+	{% endif %} 
+	<small>Posted on {{ post.date | date: "%B %-d, %Y" }}</small> 
+	
+	{% if post.summary %} 
+	{{ post.summary | markdownify }} 
+	{% else %} 
+	<p>
+		{{ post.excerpt }}
+	</p>
+	{% endif %} 
+	<div style="margin-bottom:20px; margin-top:20px">
+		<small>
+            <a href="{{ site.baseurl }}{{ post.url }}" class="button btn-warning">Read more</a></small>
+        </div>
+</article>

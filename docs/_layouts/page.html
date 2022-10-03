@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+
+{% include navbar.html %}
+{% if page.graph %}{% include graph-scripts.html %}{% endif %}
+
+<div class="container" style="padding-top:60px">
+<div class="row">
+    <div class="col-md-12" style="min-height:800px">
+    {{ content }}
+    </div>
+  </div>
+</div>
+
+<script src="{{ site.baseurl }}/assets/js/navigation.js"></script>
+

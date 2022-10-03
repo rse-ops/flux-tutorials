@@ -1,0 +1,7 @@
+---
+layout: null
+permalink: /api/languages.json
+---
+
+
+{{ site.data.data.latest.cci-languages | jsonify }}

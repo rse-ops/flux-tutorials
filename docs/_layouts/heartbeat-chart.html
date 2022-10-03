@@ -1,0 +1,57 @@
+---
+layout: heartbeat-default
+---
+{% if events %}{% else %}{% assign events = site.events %}{% endif %}
+
+{% assign issue_comment_counter = 0 %}
+{% assign issues_counter = 0 %}
+{% assign pullrequest_counter = 0 %}
+{% assign push_counter = 0 %}
+{% assign public_counter = 0 %}
+{% assign create_counter = 0 %}
+{% assign release_counter = 0 %}
+{% assign pullrequestcomment_counter = 0 %}
+
+{% for event in events %}
+  {% if event.event_type == "IssueCommentEvent" %}{% assign issue_comment_counter = issue_comment_counter | plus: 1 %}{% endif %}
+  {% if event.event_type == "IssuesEvent" %}{% assign issues_counter = issues_counter | plus: 1 %}{% endif %}
+  {% if event.event_type == "PullRequestEvent" %}{% assign pullrequest_counter = pullrequest_counter | plus: 1 %}{% endif %}
+  {% if event.event_type == "PushEvent" %}{% assign push_counter = push_counter | plus: 1 %}{% endif %}
+  {% if event.event_type == "PublicEvent" %}{% assign public_counter = public_counter | plus: 1 %}{% endif %}
+  {% if event.event_type == "CreateEvent" %}{% assign create_counter = create_counter | plus: 1 %}{% endif %}
+  {% if event.event_type == "ReleaseEvent" %}{% assign release_counter = release_counter | plus: 1 %}{% endif %}
+  {% if event.event_type == "PullRequestReviewCommentEvent" %}{% assign pullrequestcomment_counter = pullrequestcomment_counter | plus: 1 %}{% endif %}
+{% endfor %}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<nav>
+{% include browse.html %}
+</nav>
+<main class="grid flex-grid" style="background-color:white; border-radius:30px; padding:30px">
+<canvas id="bar-chart" width="800" height="450"></canvas>
+</main>
+
+<script>
+{% assign types =  site.events | map: 'event_type' | join: ','  | split: ',' | uniq %}
+new Chart(document.getElementById("bar-chart"), {
+    type: 'bar',
+    data: {
+      labels: ["PushEvent","IssuesEvent","IssueCommentEvent","CreateEvent","PullRequestEvent", "PublicEvent", "ReleaseEvent", "PullRequestReviewCommentEvent"],
+      datasets: [
+        {
+          label: "Contributions",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#c33", "chocolate", "deepskyblue"],
+          data: [{{ push_counter }},{{ issues_counter }},{{ issue_comment_counter }},{{ create_counter }},{{ pullrequest_counter}},{{ public_counter}},{{ release_counter}}, {{ pullrequestcomment_counter}}]
+        }
+      ]
+    },
+    options: {
+      legend: { display: true },
+      title: {
+        display: true,
+        text: 'Contributions by Type'
+      }
+    }
+});
+</script>
+

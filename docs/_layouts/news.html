@@ -1,0 +1,22 @@
+---
+layout: page
+---
+
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/news.css">
+
+{{ content }}
+
+<div>
+    {% assign number_posts = paginator.posts | size %}
+    {% if number_posts > 5 %}<div class="column is-12">
+        {% include news/pagination.html %}
+    </div>{% endif %}
+    {% for post in paginator.posts %}<div class="column is-12">
+        {% include news/post-card.html %}</div>{% endfor %}
+    {% if number_posts > 5 %}<div class="column is-12">
+        {% include news/pagination.html %}
+    </div>{% endif %}
+    <div class="column is-12">
+        {% include news/subscribe.html %}
+    </div>
+</div>
