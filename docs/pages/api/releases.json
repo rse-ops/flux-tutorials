@@ -1,0 +1,7 @@
+---
+layout: null
+permalink: /api/releases.json
+---
+
+
+{{ site.data.data.latest.cci-releases | jsonify }}

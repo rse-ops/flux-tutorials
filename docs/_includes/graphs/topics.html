@@ -1,0 +1,8 @@
+<svg class="radiuss-graph" id="topics"></svg>
+<script src="{{ site.baseurl }}/assets/js/extractors/topics.js"></script>
+
+<script>
+$(document).ready(function(){
+  draw_cloud_topics('#topics'{% if include.width %}, {{ include.width }}{% endif %}{% if include.height %}, {{ include.height }}{% endif %});
+})
+</script>

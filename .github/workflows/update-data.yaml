@@ -17,6 +17,9 @@ jobs:
         python .github/update-cci.py
         cat contributor-ci.yaml
 
+    - name: Generate Tutorial Data
+      run: /bin/bash .github/generate.sh
+
     - name: Update Data
       uses: vsoch/contributor-ci@0.0.15
       env:

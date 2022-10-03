@@ -1,0 +1,8 @@
+{% assign types =  site.events | map: 'event_type' | join: ','  | split: ',' | uniq %}
+  <ul>
+    <li style="padding-top:8px">Browse:</li>{% for type in types %}
+    <li><a style="background-color:#333" class="button {{ type | replace: 'Event', '' }}" href="{{ site.baseurl }}/activity/{{ type | downcase }}/">{{ type | replace: 'Event', '' }}</a></li>{% endfor %}
+    <li><a class="button" href="{{ site.baseurl }}/activity/search" style="background-color:#333">search</a></li>
+    <li><a class="button" href="{{ site.baseurl }}/activity/chart" style="background-color:#333">chart</a></li>
+    {% if page.url != "/activity/" %}<li><a class="button" href="{{ site.baseurl }}/activity" style="background-color:#333">back</a></li>{% endif %}
+  </ul>

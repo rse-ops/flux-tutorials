@@ -1,0 +1,15 @@
+---
+layout: page
+hide_hero: true
+---
+
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/news.css">
+
+<div class="content" style="padding-bottom:100px">
+    <h2>{{ page.title }}</h2>
+    {% if page.subtitle %}<h3>{{ page.subtitle }}</h3>{% endif %} 
+   <div class="tags" style="display:block">{% for tag in page.tags %}{% include tag.html tag=tag %}{% endfor %}
+</div>
+    <p>Published: {{ page.date | date: "%b %-d, %Y" }} {% if page.author %}by {{ page.author }}{% endif %}</p>
+    {{ content }}
+</div>

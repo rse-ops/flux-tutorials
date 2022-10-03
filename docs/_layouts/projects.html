@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<style>
+
+.tagify {
+  margin: auto;
+  text-align: left;
+  background-color: white;
+  width: 100%;
+  max-width: 1000px;
+  flex-direction:row;
+}
+
+input{
+  order: 5;
+}
+
+.tagify__input {
+    color: black !important;
+}
+</style>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+
+{% include navbar.html %}
+
+<div class="content">
+{{ content }}
+</div>
+
+<script src="{{ site.baseurl }}/assets/js/navigation.js"></script>

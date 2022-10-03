@@ -1,0 +1,7 @@
+title: "Flux Tutorial: 2022 for RADIUSS"
+container: ghcr.io/rse-ops/flux-tutorials:radiuss-aws-2022:jupyter-3.0.0
+project:
+  github: flux-framework/flux-core
+notebooks:
+  - name: 01-radiuss-aws-flux.ipynb
+    title: Flux Jobs Tutorial

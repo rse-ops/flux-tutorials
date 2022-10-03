@@ -1,0 +1,7 @@
+---
+layout: null
+permalink: /api/stars.json
+---
+
+
+{{ site.data.data.latest.cci-stars | jsonify }}

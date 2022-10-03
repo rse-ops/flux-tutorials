@@ -1,0 +1,36 @@
+<header class="header-main">
+    <a href="{{ site.baseurl }}/"><h1 class="radiuss">{{ site.title | replace: ' ', '-' | downcase }}</h1></a>
+  <a id="NavTrigger"
+    href="#"
+    data-g-event="Header"
+    data-g-action="Click"
+    data-g-label="Nav Toggle Open">
+    <span>Menu</span>
+  </a>
+  <nav class="main-nav" id="Navigation">
+    <ul>
+      <li class="docs">
+        <a {% if page.url == "/about/" %}class="active"{% endif %} href="{{ site.baseurl }}/about/">About</a>
+      </li>
+      <li class="news">
+        <a {% if page.url == "/news/" %}class="active"{% endif %} href="{{ site.baseurl }}/news/">News</a>
+      </li>
+      <li class="community">
+        <a href="https://software.llnl.gov/" target="_blank">LLNL OpenSource <i style="font-size:12px;margin-left:2px;" class="fa fa-external-link"></i></a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+{% unless page.hide_hero %}{% unless page.is_post %}<section class="hero short">
+  <div class="col-wrap">
+    <nav class=hero-nav>
+      <ul>
+        <li class="active">
+          <h2 style="text-align:left">{{ page.title }}</h2>
+        </li>
+      </ul>
+    </nav>
+    {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+  </div>
+</section>{% endunless %}{% endunless %}
