@@ -8,7 +8,6 @@ repo: rse-ops/flux-tutorials
 branch: main
 ######################################################
 
-url: "" 
 twitter-img: /assets/img/rse-ops-circle.png
 twitter: vsoch
 twitter_card: summary
