@@ -2,4 +2,4 @@
 layout: null
 permalink: /api/tutorials.json
 ---
-{"tutorials": {{ site.data.tutorials | jsonify }} }
+{{ site.data.tutorials | jsonify }}
