@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
 
 import argparse
-import os
 import fnmatch
+import os
 import sys
+
 import yaml
 
 here = os.path.abspath(os.path.dirname(__file__))
 root = os.path.dirname(here)
 
+
 def read_yaml(filename):
     with open(filename, "r") as stream:
         content = yaml.safe_load(stream)
     return content
+
 
 def recursive_find(base, pattern="tutorial.yaml"):
     for root, _, filenames in os.walk(base):
@@ -20,19 +23,27 @@ def recursive_find(base, pattern="tutorial.yaml"):
             yield os.path.join(root, filename)
 
 
-
 def write_yaml(yaml_dict, filename):
     with open(filename, "w") as filey:
         filey.writelines(yaml.dump(yaml_dict))
     return filename
-    
+
+
 def get_parser():
     parser = argparse.ArgumentParser(
-        description="Spack Updater Issue Parser",
+        description="Contributor CI Data Updater",
         formatter_class=argparse.RawTextHelpFormatter,
     )
-    parser.add_argument("--root", help="root to search for tutorials", default=os.path.join(root, "tutorials"))
-    parser.add_argument("--cci", help="contributor-ci.yaml file", default=os.path.join(root, "contributor-ci.yaml"))
+    parser.add_argument(
+        "--root",
+        help="root to search for tutorials",
+        default=os.path.join(root, "tutorials"),
+    )
+    parser.add_argument(
+        "--cci",
+        help="contributor-ci.yaml file",
+        default=os.path.join(root, "contributor-ci.yaml"),
+    )
 
     return parser
 
@@ -50,22 +61,22 @@ def main():
 
     if not os.path.exists(args.cci):
         sys.exit("File %s does not exist." % args.cci)
-    
+
     # read in cci.yaml
     data = read_yaml(args.cci)
 
     if "repos" not in data:
-        data['repos'] = []
+        data["repos"] = []
 
     # find all tutorial.yaml files
     for tutorial_file in recursive_find(args.root, "tutorial.yaml"):
         tutorial = read_yaml(tutorial_file)
-        url = tutorial.get('project', {}).get('github')
+        url = tutorial.get("project", {}).get("github")
         if url:
-            data['repos'].append(url)
-    
+            data["repos"].append(url)
+
     # Ensure uniqueness
-    data['repos'] = list(set(data['repos']))
+    data["repos"] = list(set(data["repos"]))
     write_yaml(data, args.cci)
 
 
