@@ -28,7 +28,7 @@ def write_yaml(yaml_dict, filename):
     
 def get_parser():
     parser = argparse.ArgumentParser(
-        description="Spack Updater Issue Parser",
+        description="Contributor CI Data Updater",
         formatter_class=argparse.RawTextHelpFormatter,
     )
     parser.add_argument("--root", help="root to search for tutorials", default=os.path.join(root, "tutorials"))
