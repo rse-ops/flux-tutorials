@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 
 import argparse
+import json
 import os
-import fnmatch
 import sys
-import yaml
+
+import jsonschema
 
 here = os.path.abspath(os.path.dirname(__file__))
 root = os.path.dirname(here)
@@ -97,7 +98,7 @@ def main():
 
     # Top level validate
     if not isinstance(data, dict):
-        sys.exit(f"json data should be a dictionary.")
+        sys.exit("json data should be a dictionary.")
 
     for name, tutorial in data.items():
         if name.lower() != name:
