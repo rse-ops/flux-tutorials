@@ -9,9 +9,14 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
 
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7
+
     - name: Build Site
       run: |
         cd docs/
+        bundle install
         bundle exec jekyll build
         cd -
 
