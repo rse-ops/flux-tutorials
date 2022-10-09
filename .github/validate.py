@@ -104,18 +104,27 @@ def main():
         if name.lower() != name:
             sys.exit(f"tutorial names should be all lowercase. Found {name}")
 
-        # No weird characters
+        # Validate the tutorial
+        jsonschema.validate(tutorial, schema=tutorial_schema)
+
+        # No weird characters in name
         chars = name.replace("-", "")
         if any(not c.isalnum() for c in chars):
             sys.exit(
                 f'tutorial names should have no special characters other than "-". Found {name}'
             )
 
-        # Validate the tutorial
-        jsonschema.validate(tutorial, schema=tutorial_schema)
+        # GitHub project should only have one name
+        github = tutorial["tutorial"]["project"]["github"]
+        if github.count("/") != 1:
+            sys.exit(
+                "Your GitHub project name should be in the format <user>/<repo> with only one slash."
+            )
+        if ":" in github or "@" in github:
+            sys.exit("Your GitHub project name should be in the format <user>/<repo>.")
 
         # We should be able to docker pull
-        container = tutorial["container"]
+        container = tutorial["tutorial"]["container"]
 
         # Do not allow latest or missing tag
         if ":" not in container or ":latest" in container:

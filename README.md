@@ -82,7 +82,18 @@ The current assumption above is that tutorials are grouped based on similar reso
 ### Site
 
 The only change needed in the [docs](docs) folder is to update the [_config.yml](_config.yml)
-to include your repository metadata. **TBA**
+to include your repository metadata.
+
+### Validation
+
+Your tutorial metadata will be validated with the [.github/workflows/main.yaml](.github/workflows/main.yaml).
+More specifically, we build the site static json API that will be used by associated tools to deploy
+the tutorials, and check the following:
+
+1. Your tutorial names are all lowercase, with only special characters `-` allowed
+2. A title, container, and project (with github name) are defined
+3. The GitHub name only has one slash (no git@ or https, etc.)
+4. The docker container needs to be pullable.
 
 License
 -------
