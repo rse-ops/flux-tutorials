@@ -157,7 +157,7 @@ def main():
             sys.exit("Your GitHub project name should be in the format <user>/<repo>.")
 
         # We should be able to docker pull
-        container = tutorial["tutorial"]["container"]
+        container = tutorial["tutorial"]["container"]["name"]
 
         # Do not allow latest or missing tag
         if ":" not in container or ":latest" in container:
