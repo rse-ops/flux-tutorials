@@ -2,7 +2,7 @@ title: "Flux Tutorial: 2022 for RADIUSS"
 container:
   name: ghcr.io/rse-ops/flux-radiuss-aws-2022:jupyter-3.0.0
   env:
-    - name: GLOBAL_PASSWORD
+    - name: password
       optional: true
   ports:
     - 443:443

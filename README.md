@@ -1,4 +1,4 @@
-# Flux Tutorials
+# 🌀️ Flux Tutorials 🌀️
 
 This repository contains flux tutorials! It is an experiment to get ready
 for testing a new lab playground where a visitor can request a notebook
@@ -23,6 +23,10 @@ should be put under a named group, under "tutorials":
 tutorials/
 
     latest/
+
+      # This is also optional, but it's nice to show how to build/run the container locally
+      README.md
+      
       # This is optional, if a base container is elsewhere it can be referenced
       Dockerfile
 
@@ -51,6 +55,51 @@ that you present them at. Also note the contents under each. If a `Dockerfile`
 is provided in the tutorial folder, this should build the base, and this is specified
 in `container.yaml`. By default, the containers will build to `ghcr.io/<org>/<repository>/<tutorial>`.
 For the tutorial here, we might see `ghcr.io/rse-ops/flux-tutorial:latest`.
+
+### Suggested Interactions
+
+#### Environment Variables
+
+If you are running a notebook, it's generally expected that
+you'll provide the user with a browser to open a notebook. This means
+we need to authenticate, which can be done by way of the container user
+as a username, and a custom password from the environment. You should
+provide a default password in the container (primarily for development)
+but also define it as an environment variable that can be controlled
+by the deployment technology. As an example, with our config here,
+the variable `GLOBAL_PASSWORD` is defined in our Dockerfile,
+but also can be defined on deploy for a custom password.
+
+#### Entrypoint Command
+
+The start of your container should generally run a notebook to demonstrate your
+software. It's also recommended to post a welcome message to inform the user
+of any needed credentials. As an example, the notebook here sets the password
+for Jupyterlab from the environment, and prints a message to the user in the terminal:
+
+```dockerfile
+# This allows the running user to set the password on the container start
+ENV GLOBAL_PASSWORD=${GLOBAL_PASSWORD}
+CMD /bin/bash /welcome.sh && \
+    echo "c.DummyAuthenticator.password = \"${GLOBAL_PASSWORD}\"" >> /home/fluxuser/jupyterhub_config.py && \
+    PATH=$HOME/.local/bin:$PATH \
+    flux start --test-size=4 /home/fluxuser/.local/bin/jupyterhub -f /home/fluxuser/jupyterhub_config.py
+```
+
+And the welcome script will show:
+
+```console
+🌀️ Welcome to the Flux Framework RADIUSS Tutorial! 🌀️
+If you are running this locally (and can see this message)
+You can open your browser to https://127.0.0.1.
+We use self-signed certificates, so you can proceed.
+Your login information is:
+
+🥑️ user: fluxuser
+🥑️ password: playground
+
+Have fun! ⭐️🦄️⭐️
+```
 
 ### Metadata
 
