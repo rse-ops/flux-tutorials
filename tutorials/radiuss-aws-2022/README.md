@@ -28,4 +28,10 @@ Your login information is:
 Have fun! ⭐️🦄️⭐️
 ```
 
+To change the password:
+
+```bash
+$ docker run -it -p 443:443 --env GLOBAL_PASSWORD=newplayground radiuss-aws-2022
+```
+
 And follow the instructions to login and do the tutorial!
