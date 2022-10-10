@@ -2,6 +2,9 @@ FROM fluxrm/flux-sched:focal
 
 ARG jupyterhub_version=2.3.1
 
+# This should be set on the fly when we create the container
+ARG GLOBAL_PASSWORD=playground
+
 RUN sudo apt-get update
 RUN DEBIAN_FRONTEND="noninteractive" sudo apt-get -y install \
     python3-pip \
@@ -18,17 +21,36 @@ RUN sudo apt-get clean \
     && sudo apt-get autoremove \
     && sudo rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN git clone https://github.com/flux-framework/flux-workflow-examples.git
+USER root
 
-COPY --chown=fluxuser:fluxuser notebooks/01-radiuss-aws-flux.ipynb .
-COPY --chown=fluxuser:fluxuser notebooks/sleep_batch.sh .
-COPY --chown=fluxuser:fluxuser notebooks/sleeps.sh .
-COPY --chown=fluxuser:fluxuser notebooks/sub_job1.sh .
-COPY --chown=fluxuser:fluxuser notebooks/sub_job2.sh .
-COPY --chown=fluxuser:fluxuser notebooks/Flux-logo.svg .
+# Generate self-signed cert and key for local use
+RUN mkdir -p /srv/certs && \
+    openssl req -x509 -nodes -days 365 -newkey rsa:4096 \
+          -subj  "/C=US/ST=CA/O=radiuss-tutorial/CN=radiuss-playground.org" \
+          -keyout /srv/certs/jupyter-selfsigned.key \
+          -out /srv/certs/jupyter-selfsigned.crt && \
+          chown -R fluxuser /srv/certs
+
+# Or copy cert and key signed by a trusted CA
+# COPY fullchain.pem /srv/jupyterhub/fullchain.pem
+# COPY privkey.pem /srv/jupyterhub/privkey.pem
+
+# Add template override directory and copy our example
+RUN mkdir -p /srv/jupyterhub/overrides
+COPY notebooks/login.html /srv/jupyterhub/overrides/login.html
+
+USER fluxuser 
+
+COPY --chown=fluxuser:fluxuser ./notebooks/jupyterhub_config.py /home/fluxuser/jupyterhub_config.py
+
+RUN git clone https://github.com/flux-framework/flux-workflow-examples.git ./notebooks/flux-workflow-examples
+COPY --chown=fluxuser:fluxuser ./notebooks/ ./notebooks
 
 ENV SHELL=/usr/bin/bash
 ENV FLUX_URI_RESOLVE_LOCAL=t
 
-CMD PATH=$HOME/.local/bin:$PATH \
-    flux start --test-size=4 /home/fluxuser/.local/bin/jupyterhub-singleuser
+# This allows the running user to set the password on the container start
+ENV GLOBAL_PASSWORD=${GLOBAL_PASSWORD}
+CMD echo "c.DummyAuthenticator.password = \"${GLOBAL_PASSWORD}\"" >> /home/fluxuser/jupyterhub_config.py && \
+    PATH=$HOME/.local/bin:$PATH \
+    flux start --test-size=4 /home/fluxuser/.local/bin/jupyterhub -f /home/fluxuser/jupyterhub_config.py
