@@ -3,7 +3,8 @@ FROM fluxrm/flux-sched:focal
 ARG jupyterhub_version=2.3.1
 
 # This should be set on the fly when we create the container
-ARG GLOBAL_PASSWORD=playground
+# We make it an argument that also looks nice as a flag
+ARG password=playground
 
 RUN sudo apt-get update
 RUN DEBIAN_FRONTEND="noninteractive" sudo apt-get -y install \
@@ -51,8 +52,8 @@ ENV SHELL=/usr/bin/bash
 ENV FLUX_URI_RESOLVE_LOCAL=t
 
 # This allows the running user to set the password on the container start
-ENV GLOBAL_PASSWORD=${GLOBAL_PASSWORD}
+ENV password=${password}
 CMD /bin/bash /welcome.sh && \
-    echo "c.DummyAuthenticator.password = \"${GLOBAL_PASSWORD}\"" >> /home/fluxuser/jupyterhub_config.py && \
+    echo "c.DummyAuthenticator.password = \"${password}\"" >> /home/fluxuser/jupyterhub_config.py && \
     PATH=$HOME/.local/bin:$PATH \
     flux start --test-size=4 /home/fluxuser/.local/bin/jupyterhub -f /home/fluxuser/jupyterhub_config.py
