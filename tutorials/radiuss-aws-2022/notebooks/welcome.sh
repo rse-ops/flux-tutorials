@@ -9,6 +9,6 @@ echo "We use self-signed certificates, so you can proceed."
 printf "Your login information is:\n\n"
 
 echo "🥑️ user: fluxuser"
-printf "🥑️ password: ${GLOBAL_PASSWORD}\n\n"
+printf "🥑️ password: ${password}\n\n"
 
 echo "Have fun! ⭐️🦄️⭐️"
