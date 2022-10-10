@@ -66,7 +66,8 @@ container:
   name: ghcr.io/rse-ops/flux-radiuss-aws-2022:jupyter-3.0.0
   # This should be changed for a production deployment
   env:
-    GLOBAL_PASSWORD: "playground"
+    name: GLOBAL_PASSWORD
+    optional: true
   ports:
     - 443:443
 project:
