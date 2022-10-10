@@ -61,19 +61,19 @@ more metadata about the project, along with labels that map to instance preferen
 for each. This is currently a limited set, and will be expanded.
 
 ```yaml
-title: Flux Tutorial Latest
-container: ghcr.io/rse-ops/flux-tutorial:latest
+title: "Flux Tutorial: 2022 for RADIUSS"
+container:
+  name: ghcr.io/rse-ops/flux-radiuss-aws-2022:jupyter-3.0.0
+  # This should be changed for a production deployment
+  env:
+    GLOBAL_PASSWORD: "playground"
+  ports:
+    - 443:443
 project:
-  github: flux-framework/flux-core
-labels:
-    memory: 8000
+  github: flux-framework/flux-core  
 notebooks:
-  - name: 01-getting-started.ipynb
-    title: Getting Started
-    tags: ['jobs', 'getting-started', 'aws']
-  - name: 02-developer-tutorial.ipynb
-    title: Developer Tutorial
-    tags: ['developer', 'aws']
+  - name: 01-radiuss-aws-flux.ipynb
+    title: Flux Jobs Tutorial
 ```
 
 We currently ask for a GitHub identifier to retrieve metadata about the project.

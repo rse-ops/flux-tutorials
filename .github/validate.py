@@ -17,6 +17,14 @@ def read_json(filename):
     return content
 
 
+# The simplest form of aliases is key/value pairs
+keyvals = {
+    "type": "object",
+    "patternProperties": {
+        "\\w[\\w-]*": {"type": "string"},
+    },
+}
+
 schema_url = "http://json-schema.org/draft-07/schema"
 
 project = {
@@ -28,6 +36,34 @@ project = {
         "github",
     ],
     "additionalProperties": False,
+}
+
+envar = {
+    "type": "object",
+    "properties": {
+        "name": {"type": "string"},
+        "optional": {"type": "boolean"},
+    },
+    "required": [
+        "name",
+        "optional",
+    ],
+    "additionalProperties": False,
+}
+
+container_schema = {
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "name",
+        ],
+        "properties": {
+            "name": {"type": "string"},
+            "env": {"type": "array", "items": envar},
+            "ports": {"type": "array", "items": {"type": "string"}},
+        },
+    },
 }
 
 
@@ -49,7 +85,7 @@ notebooks = {
 # Currently all of these are required
 tutorialProperties = {
     "title": {"type": "string"},
-    "container": {"type": "string"},
+    "container": container_schema,
     "project": project,
     "notebooks": notebooks,
 }

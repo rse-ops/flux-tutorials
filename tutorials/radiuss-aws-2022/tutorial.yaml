@@ -1,7 +1,13 @@
 title: "Flux Tutorial: 2022 for RADIUSS"
-container: ghcr.io/rse-ops/flux-radiuss-aws-2022:jupyter-3.0.0
+container:
+  name: ghcr.io/rse-ops/flux-radiuss-aws-2022:jupyter-3.0.0
+  env:
+    - name: GLOBAL_PASSWORD
+      optional: true
+  ports:
+    - 443:443
 project:
-  github: flux-framework/flux-core
+  github: flux-framework/flux-core  
 notebooks:
   - name: 01-radiuss-aws-flux.ipynb
     title: Flux Jobs Tutorial
