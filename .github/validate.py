@@ -52,17 +52,14 @@ envar = {
 }
 
 container_schema = {
-    "type": "array",
-    "items": {
-        "type": "object",
-        "required": [
-            "name",
-        ],
-        "properties": {
-            "name": {"type": "string"},
-            "env": {"type": "array", "items": envar},
-            "ports": {"type": "array", "items": {"type": "string"}},
-        },
+    "type": "object",
+    "required": [
+        "name",
+    ],
+    "properties": {
+        "name": {"type": "string"},
+        "env": {"type": "array", "items": envar},
+        "ports": {"type": "array", "items": {"type": "string"}},
     },
 }
 
