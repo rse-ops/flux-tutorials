@@ -1,5 +1,6 @@
 name: Update Contributor CI Data
 on:
+  pull_request: []
   workflow_dispatch:
   schedule:
     - cron:  '0 3 * * *'
@@ -11,31 +12,12 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
 
-    - name: Parse Repos from Data
-      run: |
-        pip install -r .github/requirements.txt
-        python .github/update-cci.py
-        cat contributor-ci.yaml
+    - name: Update Tutorial Site
+      uses: rse-ops/tutorial-actions/site@main
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        deploy: false
 
-    - name: Generate Tutorial Data
-      run: /bin/bash .github/generate.sh
-
-    - name: Update Data
-      uses: vsoch/contributor-ci@0.0.15
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with: 
-        results_dir: docs/_data/
-        extract: repos repo_metadata topics languages releases stars activity_commits activity_lines
-        extract_save_format: year/month
-
-    - name: Check that results exist
-      run: tree _data
-
-    - name: Push Results
-      run: |
-        git config --global user.name "github-actions"
-        git config --global user.email "github-actions@users.noreply.github.com"
-        git add docs/_data/data/*
-        git commit -m "Automated push with new data results $(date '+%Y-%m-%d')" || exit 0
-        git push origin main || exit 0
+        # These are not required - this shows the defaults
+        cci_file: contributor-ci.yaml
+        branch: main
