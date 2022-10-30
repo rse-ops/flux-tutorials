@@ -1,6 +1,5 @@
 name: Update Contributor CI Data
 on:
-  pull_request: []
   workflow_dispatch:
   schedule:
     - cron:  '0 3 * * *'
@@ -13,11 +12,6 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Update Tutorial Site
-      uses: rse-ops/tutorial-actions/site@develop/site-action
+      uses: rse-ops/tutorial-actions/site@main
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        deploy: false
-
-        # These are not required - this shows the defaults
-        cci_file: contributor-ci.yaml
-        branch: main
