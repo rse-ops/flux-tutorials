@@ -8,19 +8,5 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
-
-    - uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 2.7
-
-    - name: Build Site
-      run: |
-        cd docs/
-        bundle install
-        bundle exec jekyll build
-        cd -
-
     - name: Validate Data
-      run: |
-        pip install -r .github/requirements.txt
-        python .github/validate.py docs/_site/api/tutorials.json
+      uses: rse-ops/tutorial-actions/validate@main
