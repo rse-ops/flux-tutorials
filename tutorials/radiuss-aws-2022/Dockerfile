@@ -53,7 +53,7 @@ ENV FLUX_URI_RESOLVE_LOCAL=t
 
 # This allows the running user to set the password on the container start
 ENV password=${password}
+ENV PATH=/home/fluxuser/.local/bin:$PATH
 CMD /bin/bash /welcome.sh && \
     echo "c.DummyAuthenticator.password = \"${password}\"" >> /home/fluxuser/jupyterhub_config.py && \
-    PATH=$HOME/.local/bin:$PATH \
-    flux start --test-size=4 /home/fluxuser/.local/bin/jupyterhub -f /home/fluxuser/jupyterhub_config.py
+    sudo -E PATH=$PATH flux start --test-size=4 /home/fluxuser/.local/bin/jupyterhub -f /home/fluxuser/jupyterhub_config.py
