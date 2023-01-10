@@ -37,7 +37,9 @@ RUN mkdir -p /srv/certs && \
 # COPY privkey.pem /srv/jupyterhub/privkey.pem
 
 # Add template override directory and copy our example
-RUN mkdir -p /srv/jupyterhub/overrides
+RUN mkdir -p /srv/jupyterhub/overrides /var/lib/flux /run/flux && \
+    chown -R fluxuser /run/flux
+
 COPY notebooks/login.html /srv/jupyterhub/overrides/login.html
  
 USER fluxuser 
@@ -46,14 +48,23 @@ COPY --chown=fluxuser:fluxuser ./notebooks/jupyterhub_config.py /home/fluxuser/j
 
 RUN git clone https://github.com/flux-framework/flux-workflow-examples.git ./notebooks/flux-workflow-examples
 COPY --chown=fluxuser:fluxuser ./notebooks/ ./notebooks
-COPY --chown=fluxuser:fluxuser ./notebooks/welcome.sh /welcome.sh
+COPY --chown=fluxuser:fluxuser ./notebooks/welcome.sh /welcome.sh 
+COPY --chown=fluxuser:fluxuser ./notebooks/entrypoint.sh /entrypoint.sh
 
 ENV SHELL=/usr/bin/bash
 ENV FLUX_URI_RESOLVE_LOCAL=t
+
+# Broker args for the fluxuri, etc.
+ENV brokerOptions="-Scron.directory=/etc/flux/system/cron.d -Stbon.fanout=256 \
+  -Srundir=/run/flux \
+  -Sstatedir=/var/lib/flux \
+  -Slocal-uri=local:///run/flux/local \
+  -Slog-stderr-level=0 \
+  -Slog-stderr-mode=local"
 
 # This allows the running user to set the password on the container start
 ENV password=${password}
 ENV PATH=/home/fluxuser/.local/bin:$PATH
 CMD /bin/bash /welcome.sh && \
     echo "c.DummyAuthenticator.password = \"${password}\"" >> /home/fluxuser/jupyterhub_config.py && \
-    sudo -E PATH=$PATH flux start --test-size=4 /home/fluxuser/.local/bin/jupyterhub -f /home/fluxuser/jupyterhub_config.py
+    /bin/bash /entrypoint.sh
