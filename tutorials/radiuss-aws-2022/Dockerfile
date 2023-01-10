@@ -54,14 +54,6 @@ COPY --chown=fluxuser:fluxuser ./notebooks/entrypoint.sh /entrypoint.sh
 ENV SHELL=/usr/bin/bash
 ENV FLUX_URI_RESOLVE_LOCAL=t
 
-# Broker args for the fluxuri, etc.
-ENV brokerOptions="-Scron.directory=/etc/flux/system/cron.d -Stbon.fanout=256 \
-  -Srundir=/run/flux \
-  -Sstatedir=/var/lib/flux \
-  -Slocal-uri=local:///run/flux/local \
-  -Slog-stderr-level=0 \
-  -Slog-stderr-mode=local"
-
 # This allows the running user to set the password on the container start
 ENV password=${password}
 ENV PATH=/home/fluxuser/.local/bin:$PATH
