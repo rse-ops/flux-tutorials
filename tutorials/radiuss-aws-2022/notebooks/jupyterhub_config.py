@@ -24,7 +24,7 @@ c.Spawner.notebook_dir='/home/fluxuser/notebooks'
 # c.JupyterHub.hub_connect_ip = 'jupyterhub'
 
 # Uncomment to use HTTPS
-c.JupyterHub.port = 443
+c.JupyterHub.port = 8000
 
 # pick a docker image. This should have the same version of jupyterhub
 # in it as our Hub.
