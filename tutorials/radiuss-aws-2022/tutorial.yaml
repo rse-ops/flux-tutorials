@@ -1,11 +1,23 @@
 title: "Flux Tutorial: 2022 for RADIUSS"
+
+# Resources needed for the instance to run the container on
+resources:
+  memory: 4000 # GB
+  cpu: 1
+
 container:
   name: ghcr.io/rse-ops/flux-radiuss-aws-2022:jupyter-3.0.0
   env:
     - name: password
       optional: true
+
+  # All ports provided
+  # Tutorials will also expose 443 and 80 by default
   ports:
     - 8000:8000
+  # Single port to reference for the main user interface
+  expose: 8000
+
 project:
   github: flux-framework/flux-core  
 notebooks:
