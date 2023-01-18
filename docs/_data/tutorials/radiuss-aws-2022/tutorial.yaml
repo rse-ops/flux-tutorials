@@ -3,7 +3,7 @@ title: "Flux Tutorial: 2022 for RADIUSS"
 # Resources needed for the instance to run the container on
 resources:
   memory: 4000 # GB
-  cpu: 1
+  cpus: 1
 
 container:
   name: ghcr.io/rse-ops/flux-radiuss-aws-2022:jupyter-3.0.0
