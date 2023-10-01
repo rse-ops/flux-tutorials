@@ -1,0 +1,57 @@
+{
+    "flux-framework/flux-core": {
+        "nameWithOwner": "flux-framework/flux-core",
+        "name": "flux-core",
+        "owner": {
+            "login": "flux-framework",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/7545483?v=4"
+        },
+        "url": "https://github.com/flux-framework/flux-core",
+        "homepageUrl": "",
+        "description": "core  services for the Flux resource management framework",
+        "createdAt": "2014-09-26T22:27:19Z",
+        "defaultBranchRef": {
+            "name": "master"
+        },
+        "licenseInfo": {
+            "name": "GNU Lesser General Public License v3.0",
+            "nickname": "GNU LGPLv3",
+            "spdxId": "LGPL-3.0",
+            "url": "http://choosealicense.com/licenses/lgpl-3.0/"
+        },
+        "stargazers": {
+            "totalCount": 141
+        },
+        "mentionableUsers": {
+            "totalCount": 27
+        },
+        "forks": {
+            "totalCount": 43
+        },
+        "primaryLanguage": {
+            "name": "C"
+        },
+        "languages": {
+            "totalCount": 13
+        },
+        "repositoryTopics": {
+            "totalCount": 4
+        },
+        "parent": null,
+        "pullRequests_Open": {
+            "totalCount": 21
+        },
+        "pullRequests_Closed": {
+            "totalCount": 188
+        },
+        "pullRequests_Merged": {
+            "totalCount": 2429
+        },
+        "issues_Open": {
+            "totalCount": 420
+        },
+        "issues_Closed": {
+            "totalCount": 2332
+        }
+    }
+}
