@@ -2,7 +2,7 @@
     "flux-framework/flux-core": {
         "languages": {
             "totalCount": 13,
-            "totalSize": 11796344,
+            "totalSize": 11800725,
             "nodes": [
                 {
                     "name": "C",
@@ -59,10 +59,10 @@
             ],
             "edges": [
                 {
-                    "size": 8519376
+                    "size": 8523925
                 },
                 {
-                    "size": 1587847
+                    "size": 1587861
                 },
                 {
                     "size": 1171334
@@ -71,7 +71,7 @@
                     "size": 166231
                 },
                 {
-                    "size": 154225
+                    "size": 154043
                 },
                 {
                     "size": 99997
