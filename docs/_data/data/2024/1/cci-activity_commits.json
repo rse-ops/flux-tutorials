@@ -1,211 +1,211 @@
 {
     "flux-framework/flux-core": [
         {
-            "total": 19,
+            "total": 25,
             "week": "2023-01-09"
         },
         {
-            "total": 41,
+            "total": 49,
             "week": "2023-01-16"
         },
         {
-            "total": 29,
+            "total": 43,
             "week": "2023-01-23"
         },
         {
-            "total": 37,
+            "total": 49,
             "week": "2023-01-30"
         },
         {
-            "total": 48,
+            "total": 53,
             "week": "2023-02-06"
         },
         {
-            "total": 58,
+            "total": 82,
             "week": "2023-02-13"
         },
         {
-            "total": 61,
+            "total": 74,
             "week": "2023-02-20"
         },
         {
-            "total": 29,
+            "total": 40,
             "week": "2023-02-27"
         },
         {
-            "total": 21,
+            "total": 22,
             "week": "2023-03-06"
         },
         {
-            "total": 29,
+            "total": 39,
             "week": "2023-03-13"
         },
         {
-            "total": 95,
+            "total": 110,
             "week": "2023-03-20"
         },
         {
-            "total": 22,
+            "total": 32,
             "week": "2023-03-27"
         },
         {
-            "total": 52,
+            "total": 58,
             "week": "2023-04-03"
         },
         {
-            "total": 24,
+            "total": 36,
             "week": "2023-04-10"
         },
         {
-            "total": 41,
+            "total": 54,
             "week": "2023-04-17"
         },
         {
-            "total": 70,
+            "total": 81,
             "week": "2023-04-24"
         },
         {
-            "total": 39,
+            "total": 51,
             "week": "2023-05-01"
         },
         {
-            "total": 31,
+            "total": 37,
             "week": "2023-05-08"
         },
         {
-            "total": 32,
+            "total": 30,
             "week": "2023-05-15"
         },
         {
-            "total": 29,
+            "total": 32,
             "week": "2023-05-22"
         },
         {
-            "total": 43,
+            "total": 60,
             "week": "2023-05-29"
         },
         {
-            "total": 66,
+            "total": 81,
             "week": "2023-06-05"
         },
         {
-            "total": 33,
+            "total": 40,
             "week": "2023-06-12"
         },
         {
-            "total": 18,
+            "total": 21,
             "week": "2023-06-19"
         },
         {
-            "total": 31,
+            "total": 42,
             "week": "2023-06-26"
         },
         {
-            "total": 46,
+            "total": 54,
             "week": "2023-07-03"
         },
         {
-            "total": 32,
+            "total": 43,
             "week": "2023-07-10"
         },
         {
-            "total": 37,
+            "total": 45,
             "week": "2023-07-17"
         },
         {
-            "total": 30,
+            "total": 37,
             "week": "2023-07-24"
         },
         {
-            "total": 32,
+            "total": 39,
             "week": "2023-07-31"
         },
         {
-            "total": 24,
+            "total": 31,
             "week": "2023-08-07"
         },
         {
-            "total": 35,
+            "total": 40,
             "week": "2023-08-14"
         },
         {
-            "total": 33,
+            "total": 39,
             "week": "2023-08-21"
         },
         {
-            "total": 61,
+            "total": 72,
             "week": "2023-08-28"
         },
         {
-            "total": 39,
+            "total": 46,
             "week": "2023-09-04"
         },
         {
-            "total": 38,
+            "total": 48,
             "week": "2023-09-11"
         },
         {
-            "total": 39,
+            "total": 44,
             "week": "2023-09-18"
         },
         {
-            "total": 22,
+            "total": 26,
             "week": "2023-09-25"
         },
         {
-            "total": 36,
+            "total": 46,
             "week": "2023-10-02"
         },
         {
-            "total": 25,
+            "total": 31,
             "week": "2023-10-09"
         },
         {
-            "total": 55,
+            "total": 63,
             "week": "2023-10-16"
         },
         {
-            "total": 16,
+            "total": 19,
             "week": "2023-10-23"
         },
         {
-            "total": 65,
+            "total": 80,
             "week": "2023-10-30"
         },
         {
-            "total": 71,
+            "total": 79,
             "week": "2023-11-06"
         },
         {
-            "total": 45,
+            "total": 56,
             "week": "2023-11-13"
         },
         {
-            "total": 49,
+            "total": 61,
             "week": "2023-11-20"
         },
         {
-            "total": 20,
+            "total": 28,
             "week": "2023-11-27"
         },
         {
-            "total": 15,
+            "total": 19,
             "week": "2023-12-04"
         },
         {
-            "total": 20,
+            "total": 33,
             "week": "2023-12-11"
         },
         {
-            "total": 7,
+            "total": 9,
             "week": "2023-12-18"
         },
         {
-            "total": 22,
+            "total": 34,
             "week": "2023-12-25"
         },
         {
-            "total": 0,
+            "total": 15,
             "week": "2024-01-01"
         }
     ]
