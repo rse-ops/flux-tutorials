@@ -1,0 +1,353 @@
+{
+    "flux-framework/flux-core": {
+        "releases": {
+            "nodes": [
+                {
+                    "name": "flux-core v0.64.0",
+                    "publishedAt": "2024-07-03T02:14:41Z",
+                    "tagName": "v0.64.0"
+                },
+                {
+                    "name": "flux-core v0.63.0",
+                    "publishedAt": "2024-06-05T01:06:01Z",
+                    "tagName": "v0.63.0"
+                },
+                {
+                    "name": "flux-core v0.62.0",
+                    "publishedAt": "2024-05-08T03:54:55Z",
+                    "tagName": "v0.62.0"
+                },
+                {
+                    "name": "flux-core v0.61.2",
+                    "publishedAt": "2024-04-13T02:22:01Z",
+                    "tagName": "v0.61.2"
+                },
+                {
+                    "name": "flux-core v0.61.1",
+                    "publishedAt": "2024-04-09T18:35:17Z",
+                    "tagName": "v0.61.1"
+                },
+                {
+                    "name": "flux-core v0.61.0",
+                    "publishedAt": "2024-04-02T22:36:28Z",
+                    "tagName": "v0.61.0"
+                },
+                {
+                    "name": "flux-core v0.60.0",
+                    "publishedAt": "2024-03-06T03:41:48Z",
+                    "tagName": "v0.60.0"
+                },
+                {
+                    "name": "flux-core v0.59.0",
+                    "publishedAt": "2024-02-06T16:36:37Z",
+                    "tagName": "v0.59.0"
+                },
+                {
+                    "name": "flux-core v0.58.0",
+                    "publishedAt": "2024-01-05T02:53:52Z",
+                    "tagName": "v0.58.0"
+                },
+                {
+                    "name": "flux-core v0.57.0",
+                    "publishedAt": "2023-12-08T05:02:38Z",
+                    "tagName": "v0.57.0"
+                },
+                {
+                    "name": "flux-core v0.56.0",
+                    "publishedAt": "2023-11-07T21:46:02Z",
+                    "tagName": "v0.56.0"
+                },
+                {
+                    "name": "flux-core v0.55.0",
+                    "publishedAt": "2023-10-04T02:24:10Z",
+                    "tagName": "v0.55.0"
+                },
+                {
+                    "name": "flux-core v0.54.0",
+                    "publishedAt": "2023-09-06T04:24:11Z",
+                    "tagName": "v0.54.0"
+                },
+                {
+                    "name": "flux-core v0.53.0",
+                    "publishedAt": "2023-08-02T03:05:18Z",
+                    "tagName": "v0.53.0"
+                },
+                {
+                    "name": "flux-core v0.52.0",
+                    "publishedAt": "2023-07-07T14:06:57Z",
+                    "tagName": "v0.52.0"
+                },
+                {
+                    "name": "flux-core v0.51.0",
+                    "publishedAt": "2023-06-09T15:28:23Z",
+                    "tagName": "v0.51.0"
+                },
+                {
+                    "name": "flux-core v0.50.0",
+                    "publishedAt": "2023-05-03T20:12:35Z",
+                    "tagName": "v0.50.0"
+                },
+                {
+                    "name": "flux-core v0.49.0",
+                    "publishedAt": "2023-04-05T16:58:16Z",
+                    "tagName": "v0.49.0"
+                },
+                {
+                    "name": "flux-core v0.48.0",
+                    "publishedAt": "2023-03-08T04:58:40Z",
+                    "tagName": "v0.48.0"
+                },
+                {
+                    "name": "flux-core v0.47.0",
+                    "publishedAt": "2023-02-08T06:11:43Z",
+                    "tagName": "v0.47.0"
+                },
+                {
+                    "name": "flux-core v0.46.1",
+                    "publishedAt": "2022-12-11T18:17:39Z",
+                    "tagName": "v0.46.1"
+                },
+                {
+                    "name": "flux-core v0.46.0",
+                    "publishedAt": "2022-12-10T18:58:44Z",
+                    "tagName": "v0.46.0"
+                },
+                {
+                    "name": "v0.45.0",
+                    "publishedAt": "2022-11-02T01:49:13Z",
+                    "tagName": "v0.45.0"
+                },
+                {
+                    "name": "v0.44.0",
+                    "publishedAt": "2022-10-05T13:55:37Z",
+                    "tagName": "v0.44.0"
+                },
+                {
+                    "name": "v0.43.0",
+                    "publishedAt": "2022-09-07T01:37:01Z",
+                    "tagName": "v0.43.0"
+                },
+                {
+                    "name": "flux-core v0.42.0",
+                    "publishedAt": "2022-08-03T04:08:48Z",
+                    "tagName": "v0.42.0"
+                },
+                {
+                    "name": "flux-core v0.41.0",
+                    "publishedAt": "2022-07-04T15:46:55Z",
+                    "tagName": "v0.41.0"
+                },
+                {
+                    "name": "flux-core v0.40.0",
+                    "publishedAt": "2022-06-07T20:56:14Z",
+                    "tagName": "v0.40.0"
+                },
+                {
+                    "name": "flux-core v0.39.0",
+                    "publishedAt": "2022-05-06T17:46:21Z",
+                    "tagName": "v0.39.0"
+                },
+                {
+                    "name": "flux-core v0.38.0",
+                    "publishedAt": "2022-04-04T15:31:03Z",
+                    "tagName": "v0.38.0"
+                },
+                {
+                    "name": "flux-core v0.37.0",
+                    "publishedAt": "2022-03-05T02:00:49Z",
+                    "tagName": "v0.37.0"
+                },
+                {
+                    "name": "flux-core v0.36.0",
+                    "publishedAt": "2022-03-02T14:27:03Z",
+                    "tagName": "v0.36.0"
+                },
+                {
+                    "name": "flux-core v0.35.0",
+                    "publishedAt": "2022-02-05T18:04:33Z",
+                    "tagName": "v0.35.0"
+                },
+                {
+                    "name": "flux-core v0.34.0",
+                    "publishedAt": "2022-01-29T15:48:33Z",
+                    "tagName": "v0.34.0"
+                },
+                {
+                    "name": "flux-core v0.33.0",
+                    "publishedAt": "2022-01-09T02:00:32Z",
+                    "tagName": "v0.33.0"
+                },
+                {
+                    "name": "flux-core v0.32.0",
+                    "publishedAt": "2021-12-05T18:00:39Z",
+                    "tagName": "v0.32.0"
+                },
+                {
+                    "name": "flux-core v0.31.0",
+                    "publishedAt": "2021-11-06T01:43:52Z",
+                    "tagName": "v0.31.0"
+                },
+                {
+                    "name": "flux-core v0.30.0",
+                    "publishedAt": "2021-10-07T00:54:49Z",
+                    "tagName": "v0.30.0"
+                },
+                {
+                    "name": "flux-core v0.29.0",
+                    "publishedAt": "2021-09-03T23:09:51Z",
+                    "tagName": "v0.29.0"
+                },
+                {
+                    "name": "flux-core v0.28.0",
+                    "publishedAt": "2021-07-01T01:47:32Z",
+                    "tagName": "v0.28.0"
+                },
+                {
+                    "name": "flux-core v0.27.0",
+                    "publishedAt": "2021-05-29T05:55:13Z",
+                    "tagName": "v0.27.0"
+                },
+                {
+                    "name": "flux-core v0.26.0",
+                    "publishedAt": "2021-04-22T21:17:59Z",
+                    "tagName": "v0.26.0"
+                },
+                {
+                    "name": "flux-core v0.25.0",
+                    "publishedAt": "2021-04-01T17:25:56Z",
+                    "tagName": "v0.25.0"
+                },
+                {
+                    "name": "flux-core v0.24.0",
+                    "publishedAt": "2021-02-22T22:53:30Z",
+                    "tagName": "v0.24.0"
+                },
+                {
+                    "name": "flux-core v0.23.1",
+                    "publishedAt": "2021-01-27T17:14:38Z",
+                    "tagName": "v0.23.1"
+                },
+                {
+                    "name": "flux-core v0.23.0",
+                    "publishedAt": "2021-01-25T18:48:03Z",
+                    "tagName": "v0.23.0"
+                },
+                {
+                    "name": "flux-core v0.22.0",
+                    "publishedAt": "2020-12-17T04:20:04Z",
+                    "tagName": "v0.22.0"
+                },
+                {
+                    "name": "flux-core v0.21.0",
+                    "publishedAt": "2020-11-05T02:26:05Z",
+                    "tagName": "v0.21.0"
+                },
+                {
+                    "name": "flux-core v0.20.0",
+                    "publishedAt": "2020-09-30T18:14:26Z",
+                    "tagName": "v0.20.0"
+                },
+                {
+                    "name": "",
+                    "publishedAt": "2020-09-01T00:10:22Z",
+                    "tagName": "v0.19.0"
+                },
+                {
+                    "name": "flux-core v0.18.0",
+                    "publishedAt": "2020-07-29T20:58:03Z",
+                    "tagName": "v0.18.0"
+                },
+                {
+                    "name": "flux-core v0.17.0",
+                    "publishedAt": "2020-06-18T17:47:59Z",
+                    "tagName": "v0.17.0"
+                },
+                {
+                    "name": "",
+                    "publishedAt": "2020-02-25T14:28:23Z",
+                    "tagName": "v0.16.0"
+                },
+                {
+                    "name": null,
+                    "publishedAt": "2020-02-04T03:33:19Z",
+                    "tagName": "v0.15.0"
+                },
+                {
+                    "name": null,
+                    "publishedAt": "2020-01-14T05:54:45Z",
+                    "tagName": "v0.14.0"
+                },
+                {
+                    "name": null,
+                    "publishedAt": "2019-10-02T02:03:17Z",
+                    "tagName": "v0.13.0"
+                },
+                {
+                    "name": null,
+                    "publishedAt": "2019-08-01T17:31:06Z",
+                    "tagName": "v0.12.0"
+                },
+                {
+                    "name": null,
+                    "publishedAt": "2019-01-04T21:16:26Z",
+                    "tagName": "v0.11.0"
+                },
+                {
+                    "name": "",
+                    "publishedAt": "2019-01-04T21:01:56Z",
+                    "tagName": "v0.10.0"
+                },
+                {
+                    "name": null,
+                    "publishedAt": "2018-05-10T23:21:57Z",
+                    "tagName": "v0.9.0"
+                },
+                {
+                    "name": null,
+                    "publishedAt": "2017-08-24T00:29:51Z",
+                    "tagName": "v0.8.0"
+                },
+                {
+                    "name": null,
+                    "publishedAt": "2017-03-31T17:28:08Z",
+                    "tagName": "v0.7.0"
+                },
+                {
+                    "name": null,
+                    "publishedAt": "2016-11-29T22:58:22Z",
+                    "tagName": "v0.6.0"
+                },
+                {
+                    "name": null,
+                    "publishedAt": "2016-10-28T17:26:09Z",
+                    "tagName": "v0.5.0"
+                },
+                {
+                    "name": "",
+                    "publishedAt": "2016-08-12T18:03:57Z",
+                    "tagName": "v0.4.1"
+                },
+                {
+                    "name": "",
+                    "publishedAt": "2016-08-12T02:16:05Z",
+                    "tagName": "v0.4.0"
+                },
+                {
+                    "name": "v0.3.0",
+                    "publishedAt": "2016-04-26T22:39:38Z",
+                    "tagName": "0.3.0"
+                },
+                {
+                    "name": "v0.2.0",
+                    "publishedAt": "2016-02-17T18:12:22Z",
+                    "tagName": "0.2.0"
+                },
+                {
+                    "name": "First tag for build testing only",
+                    "publishedAt": "2016-02-01T17:05:19Z",
+                    "tagName": "0.1.0"
+                }
+            ]
+        }
+    }
+}
