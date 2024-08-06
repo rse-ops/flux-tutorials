@@ -1,8 +1,8 @@
 {
     "flux-framework/flux-core": {
         "languages": {
-            "totalCount": 14,
-            "totalSize": 12489001,
+            "totalCount": 15,
+            "totalSize": 12500712,
             "nodes": [
                 {
                     "name": "C",
@@ -53,6 +53,10 @@
                     "color": "#0298c3"
                 },
                 {
+                    "name": "Vim Script",
+                    "color": "#199f4b"
+                },
+                {
                     "name": "Rebol",
                     "color": "#358a5b"
                 },
@@ -63,25 +67,25 @@
             ],
             "edges": [
                 {
-                    "size": 8979491
+                    "size": 8979500
                 },
                 {
-                    "size": 1689322
+                    "size": 1693410
                 },
                 {
-                    "size": 1257629
+                    "size": 1260200
                 },
                 {
                     "size": 167939
                 },
                 {
-                    "size": 158446
+                    "size": 158696
                 },
                 {
                     "size": 98927
                 },
                 {
-                    "size": 38264
+                    "size": 38400
                 },
                 {
                     "size": 30257
@@ -97,6 +101,9 @@
                 },
                 {
                     "size": 7596
+                },
+                {
+                    "size": 4657
                 },
                 {
                     "size": 1833
