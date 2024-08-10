@@ -20,7 +20,7 @@
             "url": "http://choosealicense.com/licenses/lgpl-3.0/"
         },
         "stargazers": {
-            "totalCount": 163
+            "totalCount": 164
         },
         "mentionableUsers": {
             "totalCount": 29
@@ -39,13 +39,13 @@
         },
         "parent": null,
         "pullRequests_Open": {
-            "totalCount": 16
+            "totalCount": 15
         },
         "pullRequests_Closed": {
-            "totalCount": 204
+            "totalCount": 205
         },
         "pullRequests_Merged": {
-            "totalCount": 2806
+            "totalCount": 2807
         },
         "issues_Open": {
             "totalCount": 475
