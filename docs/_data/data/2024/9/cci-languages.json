@@ -1,8 +1,8 @@
 {
     "flux-framework/flux-core": {
         "languages": {
-            "totalCount": 15,
-            "totalSize": 12589149,
+            "totalCount": 17,
+            "totalSize": 12598945,
             "nodes": [
                 {
                     "name": "C",
@@ -45,41 +45,49 @@
                     "color": "#00004c"
                 },
                 {
-                    "name": "SourcePawn",
-                    "color": "#f69e1d"
+                    "name": "Pawn",
+                    "color": "#dbb284"
                 },
                 {
-                    "name": "Perl",
-                    "color": "#0298c3"
+                    "name": "Raku",
+                    "color": "#0000fb"
                 },
                 {
                     "name": "Vim Script",
                     "color": "#199f4b"
                 },
                 {
-                    "name": "Rebol",
-                    "color": "#358a5b"
+                    "name": "Perl",
+                    "color": "#0298c3"
+                },
+                {
+                    "name": "Rez",
+                    "color": "#FFDAB3"
                 },
                 {
                     "name": "R",
                     "color": "#198CE7"
+                },
+                {
+                    "name": "Rebol",
+                    "color": "#358a5b"
                 }
             ],
             "edges": [
                 {
-                    "size": 9042797
+                    "size": 9047408
                 },
                 {
-                    "size": 1714300
+                    "size": 1719415
                 },
                 {
-                    "size": 1263331
+                    "size": 1263374
                 },
                 {
                     "size": 168636
                 },
                 {
-                    "size": 159118
+                    "size": 159145
                 },
                 {
                     "size": 98927
@@ -100,16 +108,22 @@
                     "size": 10804
                 },
                 {
-                    "size": 7596
+                    "size": 4910
                 },
                 {
                     "size": 4657
                 },
                 {
-                    "size": 1833
+                    "size": 2686
                 },
                 {
-                    "size": 1571
+                    "size": 2508
+                },
+                {
+                    "size": 504
+                },
+                {
+                    "size": 392
                 }
             ]
         }
