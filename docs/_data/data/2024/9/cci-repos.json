@@ -26,7 +26,7 @@
             "totalCount": 29
         },
         "forks": {
-            "totalCount": 46
+            "totalCount": 47
         },
         "primaryLanguage": {
             "name": "C"
@@ -39,19 +39,19 @@
         },
         "parent": null,
         "pullRequests_Open": {
-            "totalCount": 19
+            "totalCount": 21
         },
         "pullRequests_Closed": {
             "totalCount": 205
         },
         "pullRequests_Merged": {
-            "totalCount": 2850
+            "totalCount": 2852
         },
         "issues_Open": {
-            "totalCount": 491
+            "totalCount": 493
         },
         "issues_Closed": {
-            "totalCount": 2635
+            "totalCount": 2637
         }
     }
 }
