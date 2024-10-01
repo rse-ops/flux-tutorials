@@ -1,0 +1,131 @@
+{
+    "flux-framework/flux-core": {
+        "languages": {
+            "totalCount": 17,
+            "totalSize": 12652723,
+            "nodes": [
+                {
+                    "name": "C",
+                    "color": "#555555"
+                },
+                {
+                    "name": "Shell",
+                    "color": "#89e051"
+                },
+                {
+                    "name": "Python",
+                    "color": "#3572A5"
+                },
+                {
+                    "name": "M4",
+                    "color": null
+                },
+                {
+                    "name": "Makefile",
+                    "color": "#427819"
+                },
+                {
+                    "name": "Lua",
+                    "color": "#000080"
+                },
+                {
+                    "name": "Dockerfile",
+                    "color": "#384d54"
+                },
+                {
+                    "name": "C++",
+                    "color": "#f34b7d"
+                },
+                {
+                    "name": "Roff",
+                    "color": "#ecdebe"
+                },
+                {
+                    "name": "Terra",
+                    "color": "#00004c"
+                },
+                {
+                    "name": "Pawn",
+                    "color": "#dbb284"
+                },
+                {
+                    "name": "Raku",
+                    "color": "#0000fb"
+                },
+                {
+                    "name": "Vim Script",
+                    "color": "#199f4b"
+                },
+                {
+                    "name": "Perl",
+                    "color": "#0298c3"
+                },
+                {
+                    "name": "Rez",
+                    "color": "#FFDAB3"
+                },
+                {
+                    "name": "R",
+                    "color": "#198CE7"
+                },
+                {
+                    "name": "Rebol",
+                    "color": "#358a5b"
+                }
+            ],
+            "edges": [
+                {
+                    "size": 9080753
+                },
+                {
+                    "size": 1727431
+                },
+                {
+                    "size": 1274753
+                },
+                {
+                    "size": 169502
+                },
+                {
+                    "size": 159296
+                },
+                {
+                    "size": 98927
+                },
+                {
+                    "size": 38421
+                },
+                {
+                    "size": 30257
+                },
+                {
+                    "size": 26527
+                },
+                {
+                    "size": 20395
+                },
+                {
+                    "size": 10804
+                },
+                {
+                    "size": 4910
+                },
+                {
+                    "size": 4657
+                },
+                {
+                    "size": 2686
+                },
+                {
+                    "size": 2508
+                },
+                {
+                    "size": 504
+                },
+                {
+                    "size": 392
+                }
+            ]
+        }
+    }
+}
