@@ -4,7 +4,7 @@
         "name": "flux-core",
         "owner": {
             "login": "flux-framework",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/7545483?v=4"
+            "avatarUrl": "https://private-avatars.githubusercontent.com/u/7545483?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MzQ2NjUxMDAsIm5iZiI6MTczNDY2MzkwMCwicGF0aCI6Ii91Lzc1NDU0ODMifQ.KxGr60I508viHZKJDnCOXaHP_0QC_e6e-C5biITDr-I&v=4"
         },
         "url": "https://github.com/flux-framework/flux-core",
         "homepageUrl": "",
@@ -48,7 +48,7 @@
             "totalCount": 2959
         },
         "issues_Open": {
-            "totalCount": 526
+            "totalCount": 530
         },
         "issues_Closed": {
             "totalCount": 2705
