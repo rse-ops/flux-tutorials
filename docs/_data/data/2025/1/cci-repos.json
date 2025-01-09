@@ -39,7 +39,7 @@
         },
         "parent": null,
         "pullRequests_Open": {
-            "totalCount": 12
+            "totalCount": 14
         },
         "pullRequests_Closed": {
             "totalCount": 215
@@ -48,7 +48,7 @@
             "totalCount": 2971
         },
         "issues_Open": {
-            "totalCount": 527
+            "totalCount": 528
         },
         "issues_Closed": {
             "totalCount": 2711
