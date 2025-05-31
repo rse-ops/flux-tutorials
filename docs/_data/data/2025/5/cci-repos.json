@@ -39,19 +39,19 @@
         },
         "parent": null,
         "pullRequests_Open": {
-            "totalCount": 21
+            "totalCount": 20
         },
         "pullRequests_Closed": {
-            "totalCount": 220
+            "totalCount": 229
         },
         "pullRequests_Merged": {
-            "totalCount": 3110
+            "totalCount": 3111
         },
         "issues_Open": {
-            "totalCount": 577
+            "totalCount": 576
         },
         "issues_Closed": {
-            "totalCount": 2807
+            "totalCount": 2808
         }
     }
 }
