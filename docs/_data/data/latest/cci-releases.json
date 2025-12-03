@@ -3,6 +3,11 @@
         "releases": {
             "nodes": [
                 {
+                    "name": "flux-core v0.81.0",
+                    "publishedAt": "2025-12-03T01:11:46Z",
+                    "tagName": "v0.81.0"
+                },
+                {
                     "name": "flux-core v0.80.0",
                     "publishedAt": "2025-11-04T23:49:04Z",
                     "tagName": "v0.80.0"
