@@ -23,10 +23,10 @@
             "totalCount": 193
         },
         "mentionableUsers": {
-            "totalCount": 31
+            "totalCount": 32
         },
         "forks": {
-            "totalCount": 53
+            "totalCount": 54
         },
         "primaryLanguage": {
             "name": "C"
@@ -39,19 +39,19 @@
         },
         "parent": null,
         "pullRequests_Open": {
-            "totalCount": 20
+            "totalCount": 19
         },
         "pullRequests_Closed": {
             "totalCount": 242
         },
         "pullRequests_Merged": {
-            "totalCount": 3346
+            "totalCount": 3348
         },
         "issues_Open": {
-            "totalCount": 616
+            "totalCount": 614
         },
         "issues_Closed": {
-            "totalCount": 2924
+            "totalCount": 2927
         }
     }
 }
