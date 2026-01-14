@@ -2,7 +2,7 @@
     "flux-framework/flux-core": {
         "languages": {
             "totalCount": 17,
-            "totalSize": 13850504,
+            "totalSize": 13850963,
             "nodes": [
                 {
                     "name": "C",
@@ -45,12 +45,12 @@
                     "color": "#00004c"
                 },
                 {
-                    "name": "Pawn",
-                    "color": "#dbb284"
-                },
-                {
                     "name": "Raku",
                     "color": "#0000fb"
+                },
+                {
+                    "name": "Pawn",
+                    "color": "#dbb284"
                 },
                 {
                     "name": "Vim Script",
@@ -81,7 +81,7 @@
                     "size": 1940590
                 },
                 {
-                    "size": 1666435
+                    "size": 1666447
                 },
                 {
                     "size": 170102
@@ -105,10 +105,10 @@
                     "size": 20395
                 },
                 {
-                    "size": 10804
+                    "size": 11130
                 },
                 {
-                    "size": 10683
+                    "size": 10804
                 },
                 {
                     "size": 4657
