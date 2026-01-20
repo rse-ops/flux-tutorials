@@ -32,7 +32,7 @@
             "name": "C"
         },
         "languages": {
-            "totalCount": 17
+            "totalCount": 16
         },
         "repositoryTopics": {
             "totalCount": 4
@@ -45,7 +45,7 @@
             "totalCount": 242
         },
         "pullRequests_Merged": {
-            "totalCount": 3357
+            "totalCount": 3358
         },
         "issues_Open": {
             "totalCount": 620
