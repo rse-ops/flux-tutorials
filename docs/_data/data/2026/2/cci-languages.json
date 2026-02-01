@@ -1,0 +1,124 @@
+{
+    "flux-framework/flux-core": {
+        "languages": {
+            "totalCount": 16,
+            "totalSize": 13884457,
+            "nodes": [
+                {
+                    "name": "C",
+                    "color": "#555555"
+                },
+                {
+                    "name": "Shell",
+                    "color": "#89e051"
+                },
+                {
+                    "name": "Python",
+                    "color": "#3572A5"
+                },
+                {
+                    "name": "M4",
+                    "color": null
+                },
+                {
+                    "name": "Makefile",
+                    "color": "#427819"
+                },
+                {
+                    "name": "Lua",
+                    "color": "#000080"
+                },
+                {
+                    "name": "Dockerfile",
+                    "color": "#384d54"
+                },
+                {
+                    "name": "C++",
+                    "color": "#f34b7d"
+                },
+                {
+                    "name": "Terra",
+                    "color": "#00004c"
+                },
+                {
+                    "name": "Raku",
+                    "color": "#0000fb"
+                },
+                {
+                    "name": "Pawn",
+                    "color": "#dbb284"
+                },
+                {
+                    "name": "Vim Script",
+                    "color": "#199f4b"
+                },
+                {
+                    "name": "Perl",
+                    "color": "#0298c3"
+                },
+                {
+                    "name": "Rez",
+                    "color": "#FFDAB3"
+                },
+                {
+                    "name": "R",
+                    "color": "#198CE7"
+                },
+                {
+                    "name": "Rebol",
+                    "color": "#358a5b"
+                }
+            ],
+            "edges": [
+                {
+                    "size": 9711226
+                },
+                {
+                    "size": 1949198
+                },
+                {
+                    "size": 1667426
+                },
+                {
+                    "size": 170180
+                },
+                {
+                    "size": 168540
+                },
+                {
+                    "size": 98971
+                },
+                {
+                    "size": 35598
+                },
+                {
+                    "size": 30257
+                },
+                {
+                    "size": 20395
+                },
+                {
+                    "size": 11130
+                },
+                {
+                    "size": 10804
+                },
+                {
+                    "size": 4657
+                },
+                {
+                    "size": 2671
+                },
+                {
+                    "size": 2508
+                },
+                {
+                    "size": 504
+                },
+                {
+                    "size": 392
+                }
+            ]
+        }
+    }
+}
