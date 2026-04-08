@@ -2,19 +2,19 @@
     "flux-framework/flux-core": {
         "languages": {
             "totalCount": 16,
-            "totalSize": 14363698,
+            "totalSize": 14450258,
             "nodes": [
                 {
                     "name": "C",
                     "color": "#555555"
                 },
                 {
-                    "name": "Shell",
-                    "color": "#89e051"
-                },
-                {
                     "name": "Python",
                     "color": "#3572A5"
+                },
+                {
+                    "name": "Shell",
+                    "color": "#89e051"
                 },
                 {
                     "name": "M4",
@@ -74,16 +74,16 @@
                     "size": 9771600
                 },
                 {
-                    "size": 2054752
+                    "size": 2063187
                 },
                 {
-                    "size": 1982853
+                    "size": 2060848
                 },
                 {
                     "size": 170458
                 },
                 {
-                    "size": 169146
+                    "size": 169276
                 },
                 {
                     "size": 98971
