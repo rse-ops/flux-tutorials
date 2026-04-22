@@ -32,26 +32,26 @@
             "name": "C"
         },
         "languages": {
-            "totalCount": 16
+            "totalCount": 17
         },
         "repositoryTopics": {
             "totalCount": 4
         },
         "parent": null,
         "pullRequests_Open": {
-            "totalCount": 22
+            "totalCount": 18
         },
         "pullRequests_Closed": {
             "totalCount": 250
         },
         "pullRequests_Merged": {
-            "totalCount": 3493
+            "totalCount": 3500
         },
         "issues_Open": {
-            "totalCount": 661
+            "totalCount": 660
         },
         "issues_Closed": {
-            "totalCount": 3010
+            "totalCount": 3012
         }
     }
 }

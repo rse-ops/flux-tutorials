@@ -1,8 +1,8 @@
 {
     "flux-framework/flux-core": {
         "languages": {
-            "totalCount": 16,
-            "totalSize": 14481009,
+            "totalCount": 17,
+            "totalSize": 14496218,
             "nodes": [
                 {
                     "name": "C",
@@ -61,6 +61,10 @@
                     "color": "#FFDAB3"
                 },
                 {
+                    "name": "SmPL",
+                    "color": "#c94949"
+                },
+                {
                     "name": "R",
                     "color": "#198CE7"
                 },
@@ -71,19 +75,19 @@
             ],
             "edges": [
                 {
-                    "size": 9783107
+                    "size": 9789322
                 },
                 {
-                    "size": 2075325
+                    "size": 2080871
                 },
                 {
-                    "size": 2067855
+                    "size": 2069177
                 },
                 {
-                    "size": 170458
+                    "size": 170459
                 },
                 {
-                    "size": 169341
+                    "size": 169419
                 },
                 {
                     "size": 98971
@@ -111,6 +115,9 @@
                 },
                 {
                     "size": 2508
+                },
+                {
+                    "size": 2047
                 },
                 {
                     "size": 504
