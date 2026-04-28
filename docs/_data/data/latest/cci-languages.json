@@ -2,7 +2,7 @@
     "flux-framework/flux-core": {
         "languages": {
             "totalCount": 17,
-            "totalSize": 14501969,
+            "totalSize": 14623036,
             "nodes": [
                 {
                     "name": "C",
@@ -17,12 +17,12 @@
                     "color": "#89e051"
                 },
                 {
-                    "name": "M4",
-                    "color": null
-                },
-                {
                     "name": "Makefile",
                     "color": "#427819"
+                },
+                {
+                    "name": "M4",
+                    "color": null
                 },
                 {
                     "name": "Lua",
@@ -75,19 +75,19 @@
             ],
             "edges": [
                 {
-                    "size": 9791285
+                    "size": 9841248
                 },
                 {
-                    "size": 2081697
+                    "size": 2134463
                 },
                 {
-                    "size": 2071452
+                    "size": 2088391
+                },
+                {
+                    "size": 170468
                 },
                 {
                     "size": 170430
-                },
-                {
-                    "size": 169446
                 },
                 {
                     "size": 98971
@@ -96,7 +96,7 @@
                     "size": 30257
                 },
                 {
-                    "size": 29623
+                    "size": 30000
                 },
                 {
                     "size": 20395
