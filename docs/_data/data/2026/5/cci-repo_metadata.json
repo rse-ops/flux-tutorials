@@ -1,0 +1,13 @@
+{
+    "flux-framework/flux-core": {
+        "name": "flux-framework/flux-core",
+        "description": "core  services for the Flux resource management framework",
+        "website": "",
+        "topics": [
+            "hpc",
+            "resource-manager",
+            "workflows",
+            "radiuss"
+        ]
+    }
+}
